@@ -3,7 +3,13 @@
 }
 
 .hero-headline-gradient {
-  background: linear-gradient(180deg, var(--brand) 0%, var(--brand-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--logo-dark) 0%,
+    var(--logo-mid) 35%,
+    var(--logo-light) 70%,
+    #7dd3fc 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
