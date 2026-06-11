@@ -1,0 +1,18 @@
+.hero-light-bg {
+  background-color: #ffffff;
+}
+
+.hero-headline-gradient {
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-dashboard-shell {
+  border: 1px solid rgba(15, 39, 68, 0.1);
+  background: linear-gradient(180deg, rgba(15, 39, 68, 0.97) 0%, rgba(2, 6, 23, 0.98) 100%);
+  box-shadow:
+    0 -20px 80px rgba(15, 39, 68, 0.15),
+    0 0 0 1px rgba(15, 39, 68, 0.06) inset;
+}
