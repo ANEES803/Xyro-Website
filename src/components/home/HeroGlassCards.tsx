@@ -87,6 +87,11 @@ const cardMotion = {
   visible: { opacity: 1, y: 0, scale: 1 },
 };
 
+const leftCardMotion = {
+  hidden: { opacity: 0, x: -56, y: 16, scale: 0.98 },
+  visible: { opacity: 1, x: 0, y: 0, scale: 1 },
+};
+
 function cardTransition(delay: number) {
   return {
     duration: 0.95,
@@ -110,8 +115,8 @@ function RevenueTrendCard({ isInView, animKey, enterDelay }: ChartCardProps) {
   return (
     <motion.article
       key={`revenue-card-${animKey}`}
-      initial={cardMotion.hidden}
-      animate={isInView ? cardMotion.visible : cardMotion.hidden}
+      initial={leftCardMotion.hidden}
+      animate={isInView ? leftCardMotion.visible : leftCardMotion.hidden}
       transition={cardTransition(enterDelay)}
       className="hero-glass-card p-3.5 sm:p-4"
     >
@@ -262,8 +267,8 @@ function ModuleUsageCard({ isInView, animKey, enterDelay }: ChartCardProps) {
   return (
     <motion.article
       key={`module-card-${animKey}`}
-      initial={cardMotion.hidden}
-      animate={isInView ? cardMotion.visible : cardMotion.hidden}
+      initial={leftCardMotion.hidden}
+      animate={isInView ? leftCardMotion.visible : leftCardMotion.hidden}
       transition={cardTransition(enterDelay)}
       className="hero-glass-card p-3.5 sm:p-4"
     >
@@ -311,28 +316,19 @@ function ModuleUsageCard({ isInView, animKey, enterDelay }: ChartCardProps) {
 
 export function HeroGlassCards() {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: false, amount: 0.35 });
-  const [animKey, setAnimKey] = useState(0);
-  const wasInView = useRef(false);
-
-  useEffect(() => {
-    if (isInView && !wasInView.current) {
-      setAnimKey((key) => key + 1);
-    }
-    wasInView.current = isInView;
-  }, [isInView]);
+  const isInView = useInView(ref, { once: true, amount: 0.35 });
 
   return (
     <div ref={ref} className="relative mx-auto w-full max-w-xs lg:mx-0 lg:max-w-sm">
       <div className="grid gap-3.5 sm:gap-4 lg:relative lg:h-[400px]">
         <div className="lg:absolute lg:left-0 lg:top-0 lg:w-[86%]">
-          <RevenueTrendCard isInView={isInView} animKey={animKey} enterDelay={0.05} />
+          <RevenueTrendCard isInView={isInView} animKey={0} enterDelay={0.05} />
         </div>
-        <div className="lg:absolute lg:-right-20 lg:top-[8.25rem] lg:w-[84%] xl:-right-24">
-          <MonthlySalesCard isInView={isInView} animKey={animKey} enterDelay={0.18} />
+        <div className="lg:absolute lg:-right-52 lg:top-[8.25rem] lg:w-[84%] xl:-right-56">
+          <MonthlySalesCard isInView={isInView} animKey={0} enterDelay={0.18} />
         </div>
         <div className="lg:absolute lg:left-3 lg:top-[16.5rem] lg:w-[80%]">
-          <ModuleUsageCard isInView={isInView} animKey={animKey} enterDelay={0.31} />
+          <ModuleUsageCard isInView={isInView} animKey={0} enterDelay={0.31} />
         </div>
       </div>
     </div>

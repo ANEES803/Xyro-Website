@@ -1,0 +1,345 @@
+/* ERP dashboard showcase — mock screenshot panels */
+
+.erp-showcase-tab {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 0.875rem 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.erp-showcase-tab:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.erp-showcase-tab--active {
+  border-color: rgba(30, 147, 252, 0.25);
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(15, 39, 68, 0.08);
+}
+
+.erp-showcase-tab-icon {
+  display: flex;
+  height: 2.25rem;
+  width: 2.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: rgba(30, 147, 252, 0.12);
+  color: #1e93fc;
+}
+
+.erp-showcase-tab--active .erp-showcase-tab-icon {
+  background: #1e93fc;
+  color: #ffffff;
+}
+
+.erp-showcase-preview-wrap {
+  position: relative;
+}
+
+.erp-showcase-browser {
+  overflow: hidden;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(15, 39, 68, 0.1);
+  background: #ffffff;
+  box-shadow:
+    0 24px 60px rgba(15, 39, 68, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+}
+
+.erp-showcase-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 1px solid rgba(15, 39, 68, 0.08);
+  background: #f8fafc;
+  padding: 0.75rem 1rem;
+}
+
+.erp-showcase-browser-bar span {
+  height: 0.55rem;
+  width: 0.55rem;
+  border-radius: 9999px;
+  background: #cbd5e1;
+}
+
+.erp-showcase-browser-bar span:first-child {
+  background: #f87171;
+}
+
+.erp-showcase-browser-bar span:nth-child(2) {
+  background: #fbbf24;
+}
+
+.erp-showcase-browser-bar span:nth-child(3) {
+  background: #4ade80;
+}
+
+.erp-showcase-browser-bar p {
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.erp-showcase-browser-body {
+  padding: 1rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.erp-showcase-floating-stat {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.875rem 1rem;
+  box-shadow: 0 12px 32px rgba(15, 39, 68, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+@media (min-width: 1024px) {
+  .erp-showcase-floating-stat {
+    right: -1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+/* Mock ERP screen content */
+.erp-mock-screen {
+  min-height: 18rem;
+}
+
+.erp-mock-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.erp-mock-topbar span:first-child {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f2744;
+}
+
+.erp-mock-badge {
+  border-radius: 9999px;
+  background: rgba(30, 147, 252, 0.12);
+  padding: 0.15rem 0.55rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #1e93fc;
+}
+
+.erp-mock-badge--warn {
+  background: rgba(251, 191, 36, 0.18);
+  color: #b45309;
+}
+
+.erp-mock-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.erp-mock-stats--compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.erp-mock-stat-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.erp-mock-stat-value {
+  margin-top: 0.15rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f2744;
+}
+
+.erp-mock-stat-value--up {
+  color: #1e93fc;
+}
+
+.erp-mock-chart-area {
+  border-radius: 0.875rem;
+  border: 1px solid rgba(15, 39, 68, 0.08);
+  background: #ffffff;
+  padding: 0.875rem;
+}
+
+.erp-mock-chart-title {
+  margin-bottom: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.erp-mock-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+  height: 9rem;
+}
+
+.erp-mock-bar-col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  height: 100%;
+}
+
+.erp-mock-bar-col span {
+  font-size: 0.6rem;
+  color: #64748b;
+}
+
+.erp-mock-bar {
+  width: 100%;
+  border-radius: 4px 4px 2px 2px;
+  background: rgba(30, 147, 252, 0.2);
+  min-height: 4px;
+}
+
+.erp-mock-bar--active {
+  background: linear-gradient(180deg, #7dd3fc 0%, #1e93fc 100%);
+  box-shadow: 0 6px 16px rgba(30, 147, 252, 0.25);
+}
+
+.erp-mock-split {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+}
+
+.erp-mock-donut-wrap {
+  position: relative;
+  width: 7.5rem;
+  margin: 0 auto;
+}
+
+.erp-mock-donut {
+  width: 100%;
+  height: auto;
+}
+
+.erp-mock-donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: #64748b;
+}
+
+.erp-mock-donut-center strong {
+  font-size: 0.95rem;
+  color: #0f2744;
+}
+
+.erp-mock-line-wrap {
+  border-radius: 0.875rem;
+  border: 1px solid rgba(15, 39, 68, 0.08);
+  background: #ffffff;
+  padding: 0.75rem;
+}
+
+.erp-mock-line-chart {
+  width: 100%;
+  height: 5rem;
+}
+
+.erp-mock-legend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.875rem;
+  font-size: 0.65rem;
+  color: #64748b;
+}
+
+.erp-mock-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.erp-mock-legend i {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+}
+
+.erp-mock-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.erp-mock-progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.erp-mock-progress-track {
+  height: 0.45rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: rgba(30, 147, 252, 0.12);
+}
+
+.erp-mock-progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #7dd3fc 0%, #1e93fc 100%);
+}
+
+.erp-mock-area-chart {
+  height: 6.5rem;
+}
+
+.erp-mock-area-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 640px) {
+  .erp-mock-split {
+    grid-template-columns: 1fr;
+  }
+
+  .erp-showcase-floating-stat {
+    position: static;
+    margin-top: 1rem;
+  }
+}

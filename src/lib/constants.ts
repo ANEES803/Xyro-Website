@@ -112,8 +112,43 @@ export const heroContent = {
   headlineGradient: brand.product,
   description: brand.description,
   primaryCta: { label: "Book a Demo", href: "/demo" },
-  secondaryCta: { label: "See more", href: "/features" },
+  secondaryCta: { label: "See more", href: "/#features" },
 } as const;
+
+export const erpShowcaseItems = [
+  {
+    id: "sales",
+    title: "Sales Analytics",
+    description: "Track revenue, orders, and growth with live bar charts.",
+    icon: "bar-chart" as const,
+    preview: "sales" as const,
+    highlight: { label: "Avg. monthly growth", value: "+18.4%" },
+  },
+  {
+    id: "finance",
+    title: "Finance Reports",
+    description: "Monitor cash flow, revenue split, and net profit at a glance.",
+    icon: "calculator" as const,
+    preview: "finance" as const,
+    highlight: { label: "Net profit this quarter", value: "$96,240" },
+  },
+  {
+    id: "inventory",
+    title: "Inventory Insights",
+    description: "See stock levels across warehouses with alert-ready dashboards.",
+    icon: "package" as const,
+    preview: "inventory" as const,
+    highlight: { label: "Stock accuracy", value: "98.2%" },
+  },
+  {
+    id: "hr",
+    title: "HR & Payroll",
+    description: "View attendance trends, headcount, and payroll readiness.",
+    icon: "briefcase" as const,
+    preview: "hr" as const,
+    highlight: { label: "Attendance rate", value: "94.6%" },
+  },
+] as const;
 
 export const clientLogos = [
   "NovaTrade",

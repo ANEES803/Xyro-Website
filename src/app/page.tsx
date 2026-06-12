@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/Hero";
+import { ErpShowcaseSection } from "@/components/home/ErpShowcaseSection";
 import { ClientLogosSection } from "@/components/home/ClientLogosSection";
 import { StatsSection } from "@/components/home/StatsSection";
 import { FeaturesGrid } from "@/components/home/FeaturesGrid";
@@ -21,9 +22,10 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <FeaturesGrid />
+      <ErpShowcaseSection />
       <ClientLogosSection />
       <StatsSection />
-      <FeaturesGrid />
       <IndustriesSection />
       <TestimonialsSection />
       <PricingTeaser />
